@@ -1,0 +1,74 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.container {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(250, 243, 234);
+    
+}
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    
+   
+}
+
+mat-sidenav {
+    width:30%;
+    min-width:300px;
+   
+}
+
+.heading {
+    text-align: center;
+    font-size: xx-large;
+    padding: 20px;
+
+}
+
+.instructions {
+    text-align: center;
+    background-color: lightblue;
+    padding: 8px;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+
+.final_message {
+  position:absolute;
+  bottom: 15px;
+ 
+}
+.button {
+ 
+    padding:20px;
+    min-width:200px;
+    font-size: x-large;
+}
+
+
+.menu {
+    position:absolute;
+    top:150px;
+    right:10px;
+}
+
+.upload {
+    position:absolute;
+    top:200px;
+    right:10px;
+
+}
+
+.file-input {
+    display:none;
+}
+.button:hover{
+    background-color:black;
+}

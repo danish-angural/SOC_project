@@ -1,0 +1,24 @@
+<mat-sidenav-container class="container" >
+    
+    <mat-sidenav  [opened]= "isOpen" mode="side" position="end" #sidenav>
+        <div class="flex-container">
+            <div class="heading">
+                EDIT PDF
+            </div>
+            <div class="final_message">
+                <a mat-raised-button class="button" color="warn" >Edit PDF </a>
+            </div>
+        </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        
+        <div class="menu">
+            <button mat-mini-fab color="primary" (click)="sidenav.toggle()" >
+              <mat-icon>settings</mat-icon>
+            </button>
+        </div>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

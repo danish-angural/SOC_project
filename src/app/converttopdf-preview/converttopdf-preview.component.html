@@ -1,0 +1,51 @@
+<mat-sidenav-container class="container" >
+    
+    <mat-sidenav  [opened]= "isOpen" mode="side" position="end" #sidenav>
+        
+        <div class="flex-container">
+            <div class="heading">
+                CONVERT IMAGE TO PDF
+                <mat-divider></mat-divider>
+            </div>
+            <p class="option_heading">SELECT PAGE ORIENTATION</p>
+            <div class="orientation">
+                <input id="landscape" type="radio" name="orientation" value="landscape" />
+                <label class="option_image landscape" for="landscape">Landcape</label>
+                <input id="portrait" type="radio" name="orientation" value="portrait" />
+                <label class="option_image portrait"for="portrait">Portrait</label>
+            </div>
+            <div>
+                <p class="option_heading">MARGIN</p>
+                <div class="margin">
+                    <input id="no-margin" type="radio" name="margin" value="no-margin" />
+                    <label class="option_image2 no-margin" for="no-margin">No Margin</label>
+                    <input id="small" type="radio" name="margin" value="small" />
+                    <label class="option_image2 small"for="small">Small Margin</label>
+                    <input id="big" type="radio" name="margin" value="big" />
+                    <label class="option_image2 big"for="big">Big Margin</label>
+                </div>
+            </div>
+            <br>
+            <mat-checkbox color="primary" >Merge all images in one PDF file</mat-checkbox>
+            <div class="final_message">
+                <a mat-raised-button color="warn" class="button">Convert To PDF </a>
+            </div>
+        </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        
+        <div class="menu">
+            <button mat-mini-fab color="primary" (click)="sidenav.toggle()" >
+              <mat-icon>settings</mat-icon>
+            </button>
+        </div>
+        <input type="file" class="file-input" accept=".jpg,.png"(change)="OnFileUpload($event)" #fileUpload >
+        <div class="upload">
+            <button mat-mini-fab color="primary" (click)="fileUpload.click()" >
+              <mat-icon [matBadge]="file_number" matBadgeColor="warn">add</mat-icon>
+            </button>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

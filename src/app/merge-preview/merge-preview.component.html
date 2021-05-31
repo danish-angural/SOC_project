@@ -1,0 +1,33 @@
+<mat-sidenav-container class="container" >
+    
+    <mat-sidenav  [opened]= "isOpen" mode="side" position="end" #sidenav>
+        <div class="flex-container">
+            <div class="heading">
+                MERGE PDF
+            </div>
+            <div class="instructions">
+                Please, select more PDF files by clicking again on ’Select PDF files’.
+                Select multiple files by mantaining pressed ’Ctrl’
+            </div>
+            <div class="final_message">
+                <a mat-raised-button color="warn" class="button" [disabled]="!Min_2">Merge PDF </a>
+            </div>
+        </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        
+        <div class="menu">
+            <button mat-mini-fab color="primary" (click)="sidenav.toggle()" >
+              <mat-icon>settings</mat-icon>
+            </button>
+        </div>
+        <input type="file" class="file-input" accept=".pdf" (change)="OnFileUpload($event)" #fileUpload multiple >
+        <div class="upload">
+            <button mat-mini-fab color="primary" (click)="fileUpload.click()" >
+              <mat-icon [matBadge]="file_number" matBadgeColor="warn">add</mat-icon>
+            </button>
+        </div>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>

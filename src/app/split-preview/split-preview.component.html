@@ -1,0 +1,81 @@
+<mat-sidenav-container class="container" >
+    
+    <mat-sidenav  [opened]= "isOpen" mode="side" position="end" #sidenav>
+        <div class="flex-container">
+            <div class="heading">
+                SPLIT PDF
+            </div>
+            <div class="range_container">
+            <div>
+                <mat-tab-group mat-align-tabs="center" >
+                    <mat-tab >
+                        <ng-template mat-tab-label>
+                            <h3>SPLIT BY RANGE</h3>
+                        </ng-template>
+                        <br>
+                        <div style="color: red;margin-left:20px;">RANGE MODE:</div>
+                        <mat-tab-group mat-align-tabs="center" >
+                            <mat-tab label="Fixed Range" >
+                                <br>
+                                <mat-label style="margin-left: 20px;">Split in Ranges of:</mat-label>
+                                <input matInput type="number" min=1 >
+                            </mat-tab>
+                            <mat-tab label="Custom Ranges">
+                                <br>
+                                <div class="range_container">
+                                <div *ngFor="let range of ranges" style="margin:20px;">
+                                    <div style="color:red;">{{range}}</div>
+                                    from page
+                                    <input matInput type="number" min=1 #from> 
+                                    to 
+                                    <input matInput type="number" min={{from.value}}>
+                                    
+                                    <button  matSuffix mat-icon-button aria-label="Clear" (click)="removeRange($range)">
+                                        <mat-icon [inline]="true">close</mat-icon>
+                                    </button>
+                                    <br>
+                                    <mat-divider></mat-divider>
+                                </div>
+                                </div>
+                                <div class="center">
+                                <button mat-raised-button (click)="addRange()" color="primary" class="btn">Add Range</button>
+                                </div>
+                            </mat-tab>
+                        </mat-tab-group>                     
+                    </mat-tab>
+                    <mat-tab >
+                        <ng-template mat-tab-label>
+                           <h3>EXTRACT PAGES</h3>
+                        </ng-template>
+                        <br><br>
+                        <div class="center">                              
+                            <label class="labels">Pages to Extract:</label>
+                            <input placeholder="Ex:1,2-4" type="text" class="form">                           
+                        </div>
+                        <br><br>
+                        <div class="instructions">
+                            Every selected page of this PDF file will be converted in one separated PDF file.
+                        </div>
+                        <br>
+                        <mat-checkbox color="primary" class="labels">Merge extracted pages in one PDF file</mat-checkbox>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+            </div>
+            <div class="final_message">
+                <a mat-raised-button color="warn" class="button" >Split PDF </a>
+            </div>
+        </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="xyz">
+        
+        <div class="menu">
+            <button mat-mini-fab color="primary" (click)="sidenav.toggle()" >
+              <mat-icon>settings</mat-icon>
+            </button>
+        </div>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

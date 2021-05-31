@@ -1,0 +1,158 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.container {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(250, 243, 234);
+    
+}
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    
+   
+}
+
+mat-sidenav {
+    width:30%;
+    min-width:300px;
+   
+}
+
+.heading {
+    text-align: center;
+    font-size: xx-large;
+    padding: 20px;
+
+}
+
+.instructions {
+    text-align: center;
+    background-color: lightblue;
+    padding: 8px;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+
+.final_message {
+  position:absolute;
+  bottom: 15px;
+  align-self: center;
+  
+}
+.button {
+    
+    padding:20px;
+    min-width:200px;
+    font-size: x-large;
+    
+}
+
+
+.menu {
+    position:absolute;
+    top:150px;
+    right:10px;
+}
+
+.upload {
+    position:absolute;
+    top:200px;
+    right:10px;
+
+}
+
+.file-input {
+    display:none;
+}
+
+.options {
+   width:50px;
+   height:50px;
+   padding-left:10px;
+   padding-right: 10px;
+   
+}
+
+.option_heading {
+    color:red;
+    text-align: center;
+}
+
+
+
+.caption{
+    text-align:center;
+}
+
+.button:hover{
+    background-color:black;
+}
+
+.orientation input{
+    margin:0;padding:0;
+    appearance:none;
+}
+.landscape{background-image:url('src\assets\images\landscape.png');}
+.portrait{background-image:url('src\assets\images\portrait.png');}
+
+.orientation input:active +.option_image{opacity: .8;}
+.orientation input:checked +.option_image{ filter:none;}
+.option_image{
+    cursor:pointer;
+    background-position:center 90%;
+    background-repeat:no-repeat;
+    background-size:45% auto;
+    display:inline-block;
+    width:9vw;height:12vh;
+    min-width:70px;
+    max-height:70px;
+    filter: brightness(1.8) grayscale(1) opacity(.5);
+    border:solid 2px ;
+    border-radius: 4px;
+    margin:5px;
+    padding:5px;
+    text-align: center;
+    
+}
+.option_image:hover {
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+.margin input{
+    margin:0;
+    padding:0;
+    appearance:none;
+}
+
+.no-margin{background-image:url('src\assets\images\no-margin.png');}
+.small{background-image:url('src\assets\images\small-margin.png');}
+.big{background-image:url('src\assets\images\big-margin.png');}
+
+.margin input:active +.option_image2{opacity: .8;}
+.margin input:checked +.option_image2{ filter: none;}
+.option_image2{
+    cursor:pointer;
+    background-position:center 90%;
+    background-repeat:no-repeat;
+    background-size:45% auto;
+    display:inline-block;
+    width:5vw;height:13vh;
+    min-width:50px;
+    min-height:50px;
+    filter: brightness(1.8) grayscale(1) opacity(.5);
+    border:solid 2px ;
+    border-radius: 4px;
+    margin:5px;
+    padding:5px;
+    text-align: center;
+    
+}
+.option_image2:hover {
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+}

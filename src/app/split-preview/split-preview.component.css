@@ -1,0 +1,145 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.container {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(250, 243, 234);
+}
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+mat-sidenav {
+    width:30%;
+    min-width:320px;
+}
+
+.heading {
+    text-align: center;
+    font-size: xx-large;
+    padding: 20px;
+}
+
+.range_container{
+    max-height:70vh;
+    overflow-y:auto;
+}
+
+.instructions {
+    text-align: center;
+    background-color: rgb(199, 233, 245);
+    padding: 8px;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.final_message {
+    position:absolute;
+    bottom: 15px;
+ 
+}
+a {
+    padding:20px;
+    min-width:200px;
+}
+
+
+.menu {
+    position:absolute;
+    top:150px;
+    right:10px;
+}
+
+.upload {
+    position:absolute;
+    top:200px;
+    right:10px;
+}
+
+.file-input {
+    display:none;
+}
+
+.extract_range {
+    width:50%;
+    padding-top: 20px;
+    
+}
+.button {
+    padding:20px;
+    min-width:200px;
+    font-size: x-large;
+}
+
+.labels {
+    margin-left:10px;
+    text-align: center;  
+}
+
+.form {
+    font-size:large;
+    width:85%;
+    padding:1% 2%;
+    margin-left:10px;
+    box-sizing:border-box;
+    
+}
+
+input[type=number]{
+    width:40px;
+    height:20px;
+    font-size: large;
+    margin:5px;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+    width:90%;
+    margin-left: 10px;
+}
+
+.button:hover{
+    background-color:black;
+}
+
+.btn:hover{
+    background-color:rgb(105, 135, 192);
+}
+
+input {
+    border-radius: 5px;
+    border: solid 1.5px #D3D3D3;
+    margin-top: 5px;
+}
+
+input[type=text]:hover{
+    box-shadow: 0 0 5pt 0.25pt #e9e8e8 inset;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 5pt 0.5pt #e5e2e2 inset;
+    outline-width: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+ 
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
