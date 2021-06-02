@@ -22,6 +22,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NavbarComponent } from './Homepage/navbar/navbar.component';
+import { SectionComponent } from './Homepage/section/section.component';
 
 
 
@@ -34,6 +35,7 @@ import { NavbarComponent } from './Homepage/navbar/navbar.component';
     ConverttopdfPreviewComponent,
     EditPDFPreviewComponent,
     NavbarComponent,
+    SectionComponent,
   ],
   imports: [
     BrowserModule,
