@@ -21,6 +21,7 @@ import {EditPDFPreviewComponent} from './edit-pdfpreview/edit-pdfpreview.compone
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { NavbarComponent } from './Homepage/navbar/navbar.component';
 
 
 
@@ -32,6 +33,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MergePreviewComponent,
     ConverttopdfPreviewComponent,
     EditPDFPreviewComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
