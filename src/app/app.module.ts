@@ -23,6 +23,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NavbarComponent } from './Homepage/navbar/navbar.component';
 import { SectionComponent } from './Homepage/section/section.component';
+import { ContainerComponent } from './Homepage/container/container.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -36,6 +38,7 @@ import { SectionComponent } from './Homepage/section/section.component';
     EditPDFPreviewComponent,
     NavbarComponent,
     SectionComponent,
+    ContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { SectionComponent } from './Homepage/section/section.component';
     MatRadioModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatCardModule,
     
   ],
   providers: [],
