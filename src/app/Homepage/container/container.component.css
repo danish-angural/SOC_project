@@ -1,12 +1,48 @@
-.merge-pdf {
-    max-width: 15vw;
+/* .main-container{
+  background: url('./../images/sectionbackground.jpg');
+  background-size: cover;
+} */
+.main-container1{
+  margin-top: -5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  background: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Minimalist-Crumpled-Paper-Simple-Background-Image.jpg");
+  /* background: url("https://us.123rf.com/450wm/lava4images/lava4images1511/lava4images151100001/47900080-classic-and-elegant-linen-fabric-textured-background-in-natural-colour.jpg?ver=6"); */
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 11;
+}
+.sub-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 18vw;
+  align-items: center;
+  width: 60vw;
+}
+
+.card{
+  width: 20vw;
+  margin: 5vw;
+  margin-top: 5vh;
+}
+
+.title{
+  text-align: center;
+  font-weight: 500;
+}
+
+.desc{
+    text-align: center;
+    font-weight: 200;
   }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-  .Main{
-      height: 100px;
-      
+
+/* .card{
+  width:20%;
+} */
+
+.card mat-card img{
+    width: 95%;
+    align-self: center;
+    padding: 5px;
   }

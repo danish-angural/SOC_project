@@ -1,13 +1,16 @@
 <div class="main-container">
-  <mat-card class="merge-pdf">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>MERGE PDF</mat-card-title>
-        <mat-card-subtitle>merges two or more pdf</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image id="image1" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <!-- <mat-card-content>
-          Merge PDF
-      </mat-card-content> -->
-    </mat-card>
+  <div class="main-container1">
+    <div class="sub-container">
+        <div class="card" *ngFor="let i of cards">
+          <mat-card>
+              <img id="image1" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+              <div class="title"><p>{{i.title}}</p></div>
+                <div class="desc"><p>{{i.desc}}</p></div>
+              <!-- <mat-card-content>
+                  Merge PDF
+              </mat-card-content> -->
+            </mat-card>
+        </div>
+    </div>
+  </div>
 </div>
