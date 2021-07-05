@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule , routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PreviewComponent } from './preview/preview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +28,9 @@ import { ContainerComponent } from './Homepage/container/container.component';
 import {MatCardModule} from '@angular/material/card';
 
 
+import { NgxFileDropModule } from 'ngx-file-drop';
+import { HomepageComponent } from './homepage/homepage.component';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +43,8 @@ import {MatCardModule} from '@angular/material/card';
     NavbarComponent,
     SectionComponent,
     ContainerComponent,
+    routingComponents,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,9 @@ import {MatCardModule} from '@angular/material/card';
     MatCheckboxModule,
     MatFormFieldModule,
     MatCardModule,
+    FormsModule,
+    HttpClientModule,
+    NgxFileDropModule
     
   ],
   providers: [],

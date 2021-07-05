@@ -1,0 +1,56 @@
+
+.head{
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+span{
+    padding-right: 1rem;
+}
+
+.heading{
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.desc{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.select{
+    padding-top: 30px;
+    text-align: center;
+    
+}
+
+.drive{
+    text-align: center;
+    padding-top: 10px;
+    padding-right: px;
+}
+
+.center{
+    border-style: none;
+    background-color:#3f51b5;
+}
+
+.main-containerU{
+    margin-top: -5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: -5vh;
+    background: url("https://image.freepik.com/free-photo/crumpled-gray-paper-background-dark-grey-sheet-texture_156843-164.jpg");
+    /* background: url("https://us.123rf.com/450wm/lava4images/lava4images1511/lava4images151100001/47900080-classic-and-elegant-linen-fabric-textured-background-in-natural-colour.jpg?ver=6"); */
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 10px 10px 10px 10px #747070;
+    z-index: 13;
+  }
+  

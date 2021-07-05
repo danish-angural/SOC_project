@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+
+<div class="heading" [ngSwitch]="purpose"><h1>
+    <div *ngSwitchCase="'Merge'">Merge PDF files</div>
+    <div *ngSwitchCase="'Split'">Split a PDF file</div>
+    <div *ngSwitchCase="'ConvertPDF'">Convert to PDF</div>
+    <div *ngSwitchCase="'Edit'">Edit PDF</div>
+</h1></div>
+
+<div class="desc" [ngSwitch]="purpose">
+    <div *ngSwitchCase="'Merge'">Upload PDFs in the order you want</div>
+    <div *ngSwitchCase="'Split'">Separate Pages of a PDF</div>
+    <div *ngSwitchCase="'ConvertPDF'">Upload PDFs in the order you want</div>
+    <div *ngSwitchCase="'Edit'">Edit your PDFs</div>   
+ </div>
+
+<div class="select" >
+        <button mat-flat-button color="primary">
+           <p style="padding-left: 40px;padding-right: 40px;padding-top: 15px;padding-bottom: 10px;font-size: 30px;"> Select PDF files</p>
+        </button>
+</div>
+
+
+
+
+
+<div class="center" style="width:23.6%; margin-left: 38.4%;margin-right: 38.4%;margin-top: 20px;" >
+    <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" 
+    (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" accept=".pdf" >
+        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector" >
+          <p style="color: beige;font-size: larger;">Drop files here</p>
+          <button styles="margin-left=10px" type="button" (click)="openFileSelector()" style="background-color:#3f51b5;padding: 10px;margin: 20px;border-color: beige;">
+            <p style="color:beige ;font-size: 15px;">Browse</p>  
+          </button>
+        </ng-template>
+    </ngx-file-drop>
+    <div class="upload-table">
+        <table class="table">
+            <tbody class="upload-name-style">
+                <tr *ngFor="let item of files; let i=index">
+                    <td style="color: beige;"><strong>{{ item.relativePath }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br>
+<br>
+<Section class="main1">
+ <h2 style="text-align: center;"> The PDF software trusted by millions of users</h2>
+<h4  style="text-align: center;">PDFLOVERS is your number 1 web app for editing PDF with ease.<br> all the tools you need to work efficiently with your digital documents while keeping your data safe and secure.</h4>
+
+</Section>
+<footer>
+  <div class="center">
+      Copyright &copy; PDFLOVERS All rights reserved!
+  </div>
+</footer>
