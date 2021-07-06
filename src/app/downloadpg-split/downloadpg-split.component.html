@@ -1,10 +1,14 @@
 <app-navbar></app-navbar>
-<div class="main">
-    <div class="heading" >PDFs have been merged!</div>
+
+  <!-------------------------------------------------------------------------------------------------->
+  <div class="main">
+  
+  
+    <div class="heading" >PDF have been split!</div>
     
     <div style="text-align: center;">
       <button mat-mini-fab style="background-color: rgb(65, 48, 48);"
-      matTooltip="Back to the merged PDF"
+      matTooltip="Back to the split PDF"
       >          
         <mat-icon class="col">arrow_back</mat-icon>
       </button>
@@ -13,7 +17,7 @@
           
           <mat-icon style="font-size: 33px;margin-right: 10px; margin-bottom: 8px;" >download</mat-icon>
           
-          <span style="font-family: 'Times New Roman', Times, serif;">Download Merged PDF</span>
+          <span style="font-family: 'Times New Roman', Times, serif;">Download Split PDF</span>
         </button>
       </a>
         <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="More Options" aria-label="Example icon-button with a menu">
@@ -24,14 +28,12 @@
             <mat-icon>compress</mat-icon>
             <span>Compress PDF</span>
           </button>
-        
-          <a routerLink="/split" style="text-decoration: none;"> 
-            <button mat-menu-item >
-              <mat-icon>splitscreen</mat-icon>
-              <span>Split PDF</span>
-            </button>
+          <a routerLink="/merge" style="text-decoration: none;"> 
+          <button mat-menu-item >
+            <mat-icon>call_merge</mat-icon>
+            <span>Merge PDF</span>
+          </button>
           </a>
-          
           <button mat-menu-item>
             <mat-icon>list_alt</mat-icon>
             <span>Organise PDF</span>
@@ -39,12 +41,9 @@
         </mat-menu>
       
     </div>
+  </div>
+  <footer>
+    <div class="center">
+        Copyright &copy; PDFLOVERS All rights reserved!
     </div>
-    
-    <footer>
-      <div class="center">
-          Copyright &copy; PDFLOVERS All rights reserved!
-      </div>
-    </footer>
-    
-
+  </footer>
