@@ -30,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
 
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { HomepageComponent } from './homepage/homepage.component';
+import { DownloadpgMergeComponent } from './downloadpg-merge/downloadpg-merge.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     SectionComponent,
     ContainerComponent,
     routingComponents,
-    HomepageComponent
+    HomepageComponent,
+    DownloadpgMergeComponent
   ],
   imports: [
     BrowserModule,
