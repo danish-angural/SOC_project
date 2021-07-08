@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule , routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PreviewComponent } from './preview/preview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,8 +26,14 @@ import { NavbarComponent } from './Homepage/navbar/navbar.component';
 import { SectionComponent } from './Homepage/section/section.component';
 import { ContainerComponent } from './Homepage/container/container.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
-
+import { NgxFileDropModule } from 'ngx-file-drop';
+import { HomepageComponent } from './homepage/homepage.component';
+import { DownloadpgMergeComponent } from './downloadpg-merge/downloadpg-merge.component';
+import { DownloadpgSplitComponent } from './downloadpg-split/downloadpg-split.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -39,6 +46,10 @@ import {MatCardModule} from '@angular/material/card';
     NavbarComponent,
     SectionComponent,
     ContainerComponent,
+    routingComponents,
+    HomepageComponent,
+    DownloadpgMergeComponent,
+    DownloadpgSplitComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +67,16 @@ import {MatCardModule} from '@angular/material/card';
     MatCheckboxModule,
     MatFormFieldModule,
     MatCardModule,
+    FormsModule,
+    HttpClientModule,
+    NgxFileDropModule,
+    MatMenuModule,
+    MatTooltipModule,
+    RouterModule,
+    RouterModule.forRoot([
+      { path: 'split', component: DownloadpgSplitComponent },
+      { path: 'merge', component: DownloadpgMergeComponent },
+    ])
     
   ],
   providers: [],
