@@ -23,6 +23,7 @@
     "@angular/router": "~11.2.9",
     "ngx-file-drop": "^11.1.0",
     "ngx-overflow-shadow": "^0.1.6",
+    "pdf-lib": "^1.16.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

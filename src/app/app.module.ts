@@ -76,6 +76,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: 'split', component: DownloadpgSplitComponent },
       { path: 'merge', component: DownloadpgMergeComponent },
+      { path: 'preview', component: ConverttopdfPreviewComponent }
     ])
     
   ],
