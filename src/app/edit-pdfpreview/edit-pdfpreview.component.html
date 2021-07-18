@@ -2,14 +2,53 @@
     
     <mat-sidenav  [opened]= "isOpen" mode="side" position="end" #sidenav>
         <div class="flex-container">
-            <div class="heading">
+            <div class="heading" >
                 EDIT PDF
             </div>
+            <br>
+            <br>
+            <button (click)="modifyPdf()">Create PDF</button>
+            <input type="file" class="file-input" accept=".pdf" (change)="OnFileUpload($event)" #fileUpload multiple >
+        <div class="upload">
+            <button mat-mini-fab color="primary" (click)="fileUpload.click()" >
+              <mat-icon [matBadge]="file_number" matBadgeColor="warn">add</mat-icon>
+            </button>
+        </div>
+          <div>
+            <input type="text" placeholder="Type something..." id="myInput" #box (keyup.enter)="update(box.value)"
+            (blur)="update(box.value)">
+          </div>
+
+          <div>
+            <input type="text" placeholder="Type something..." id="myInput" #box1 (keyup.enter)="update_x(box1.value)"
+            (blur)="update(box.value)">
+          </div>
+
+
+          <div>
+            <input type="text" placeholder="Type something..." id="myInput" #box2 (keyup.enter)="update_y(box2.value)"
+            (blur)="update(box.value)">
+          </div>
+
+
+
+          <div>
+            <input type="text" placeholder="Type something..." id="myInput" #box3 (keyup.enter)="update_pg(box3.value)"
+            (blur)="update(box.value)">
+          </div>
+
+          {{values_x}}  <br>
+
+          {{values_y}} <br>{{values_pg}}
             <div class="final_message">
-                <a mat-raised-button class="button" color="warn" >Edit PDF </a>
+                <a mat-raised-button class="button" color="warn" >Edit PDF {{values}} </a>
             </div>
         </div>
     </mat-sidenav>
+    <script src="https://unpkg.com/pdf-lib"></script>
+    <body>
+        <iframe id="pdf" style="width: 100%; height: 100%;"></iframe>
+      </body>
     
     <mat-sidenav-content>
         
@@ -18,7 +57,9 @@
               <mat-icon>settings</mat-icon>
             </button>
         </div>
-        
+      
+         
     </mat-sidenav-content>
+   
 </mat-sidenav-container>
 
